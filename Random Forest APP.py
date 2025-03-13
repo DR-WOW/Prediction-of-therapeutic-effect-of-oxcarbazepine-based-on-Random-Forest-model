@@ -10,24 +10,24 @@ model = joblib.load('Random Forest.pkl')
 
 # 特征范围定义（根据提供的特征范围和数据类型）
 feature_ranges = {
-    "AGE (Age in years)": {"type": "numerical", "min": 0.0, "max": 18.0, "default": 5.0},
-    "WT (Weight in kg)": {"type": "numerical", "min": 0.0, "max": 200.0, "default": 20.0},
-    "Daily_Dose (Daily Dose)": {"type": "numerical", "min": 0.0, "max": 4000.0, "default": 2000.0},
-    "Single_Dose (Single Dose)": {"type": "numerical", "min": 0.0, "max": 4000.0, "default": 450.0},
+    "AGE (Age, years)": {"type": "numerical", "min": 0.0, "max": 18.0, "default": 5.0},
+    "WT (Weight, kg)": {"type": "numerical", "min": 0.0, "max": 200.0, "default": 20.0},
+    "Daily_Dose (Daily Dose, mg)": {"type": "numerical", "min": 0.0, "max": 4000.0, "default": 2000.0},
+    "Single_Dose (Single Dose, mg)": {"type": "numerical", "min": 0.0, "max": 4000.0, "default": 450.0},
     "VPA (1 = Combined with VPA, 0 = Combined without VPA)": {"type": "categorical", "options": [0, 1], "default": 0},
     "Terms (Outpatient or Hospitalized)": {"type": "categorical", "options": [0, 1], "default": 0},
-    "Cmin (Trough concentration)": {"type": "numerical", "min": 0.0, "max": 100.0, "default": 15.0},
-    "DBIL (Direct Bilirubin)": {"type": "numerical", "min": 0.0, "max": 1000.0, "default": 5.0},
-    "TBIL (Total Bilirubin)": {"type": "numerical", "min": 0.0, "max": 200.0, "default": 5.0},
-    "ALT (Alanine Aminotransferase)": {"type": "numerical", "min": 0.0, "max": 200.0, "default": 20.0},
-    "AST (Aspartate Aminotransferase)": {"type": "numerical", "min": 0.0, "max": 500.0, "default": 20.0},
-    "SCR (Serum Creatinine)": {"type": "numerical", "min": 0.0, "max": 200.0, "default": 35.0},
-    "BUN (Blood Urea Nitrogen)": {"type": "numerical", "min": 0.0, "max": 200.0, "default": 5.0},
-    "CLCR (Creatinine Clearance Rate)": {"type": "numerical", "min": 0.0, "max": 500.0, "default": 90.0},
-    "HGB (Hemoglobin)": {"type": "numerical", "min": 0.0, "max": 500.0, "default": 120.0},
-    "HCT (Hematocrit)": {"type": "numerical", "min": 0.0, "max": 200.0, "default": 35.0},
-    "MCH (Mean Corpuscular Hemoglobin)": {"type": "numerical", "min": 0.0, "max": 1000.0, "default": 30.0},
-    "MCHC (Mean Corpuscular Hemoglobin Concentration)": {"type": "numerical", "min": 0.0, "max": 500.0, "default": 345.0}
+    "Cmin (Trough concentration, mg/L)": {"type": "numerical", "min": 0.0, "max": 100.0, "default": 15.0},
+    "DBIL (Direct Bilirubin, μmol/L)": {"type": "numerical", "min": 0.0, "max": 1000.0, "default": 5.0},
+    "TBIL (Total Bilirubin, μmol/L)": {"type": "numerical", "min": 0.0, "max": 200.0, "default": 5.0},
+    "ALT (Alanine Aminotransferase, U/L)": {"type": "numerical", "min": 0.0, "max": 200.0, "default": 20.0},
+    "AST (Aspartate Aminotransferase, U/L)": {"type": "numerical", "min": 0.0, "max": 500.0, "default": 20.0},
+    "SCR (Serum Creatinine, μmol/L)": {"type": "numerical", "min": 0.0, "max": 200.0, "default": 35.0},
+    "BUN (Blood Urea Nitrogen, mmol/L)": {"type": "numerical", "min": 0.0, "max": 200.0, "default": 5.0},
+    "CLCR (Creatinine Clearance Rate, L/h)": {"type": "numerical", "min": 0.0, "max": 500.0, "default": 90.0},
+    "HGB (Hemoglobin, g/L)": {"type": "numerical", "min": 0.0, "max": 500.0, "default": 120.0},
+    "HCT (Hematocrit, %)": {"type": "numerical", "min": 0.0, "max": 200.0, "default": 35.0},
+    "MCH (Mean Corpuscular Hemoglobin, pg)": {"type": "numerical", "min": 0.0, "max": 1000.0, "default": 30.0},
+    "MCHC (Mean Corpuscular Hemoglobin Concentration, g/L)": {"type": "numerical", "min": 0.0, "max": 500.0, "default": 345.0}
 }
 
 
